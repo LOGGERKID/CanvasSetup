@@ -10,7 +10,13 @@ function init() {
 }
 // Utility Functions
 document.addEventListener("resize",()=>{
-    
+    if(tx!=window.innerWidth || ty!= window.innerHeight){
+        //Resize the canvas to the new values of Window Full screen
+        tx = window.innerWidth;
+        ty = window.innerHeight;
+        canvas.width = tx;
+        canvas.height = ty; 
+    }
     
 })
 
