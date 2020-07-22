@@ -7,6 +7,10 @@ function init() {
     var ty = window.innerWidth;
     canvas.width = tx;
     canvas.height = ty;
+    mouse = {
+        x: tx/2,
+        y:ty/2
+    }
 }
 // Utility Functions
 document.addEventListener("resize",()=>{
@@ -19,5 +23,14 @@ document.addEventListener("resize",()=>{
     }
     
 })
+
+document.addEventListener("mousemove",(e)=>{
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+    // Check the output here uncomment the below line
+    // console.log(mouse);
+})
+
+
 
 window.onload = init;
